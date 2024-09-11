@@ -1,0 +1,14 @@
+- id: add-dco
+  name: 'Add DCO sign-off'
+  entry: hooks/add-dco
+  description: adds DCO sign off into commit
+  language: script
+  files: .*
+  stages: [commit-msg]
+- id: gradle-spotless
+  name: 'Gradle Spotless'
+  entry: hooks/gradle-spotless
+  description: runs gradlew spotless in the current project
+  language: script
+  files: .*
+  stages: [pre-commit]
